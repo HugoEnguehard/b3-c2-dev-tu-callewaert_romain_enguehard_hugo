@@ -1,0 +1,26 @@
+{
+  "name": "b3-c2-dev-tu-callewaert_romain_enguehard_hugo",
+  "version": "1.0.0",
+  "description": "Création d'une calculatrice à laquelle seront associés des tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoEnguehard/b3-c2-dev-tu-callewaert_romain_enguehard_hugo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HugoEnguehard/b3-c2-dev-tu-callewaert_romain_enguehard_hugo/issues"
+  },
+  "homepage": "https://github.com/HugoEnguehard/b3-c2-dev-tu-callewaert_romain_enguehard_hugo#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
