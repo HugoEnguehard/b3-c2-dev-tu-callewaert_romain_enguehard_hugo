@@ -1,4 +1,6 @@
-module.exports = {
-    // We will put here the functions we need to implement to make the calculs
-
+function multiplication(a, b) {
+    if(isNaN(a) || isNaN(b) || typeof(a) !== 'number' || typeof(b) !== 'number') return NaN;
+    return a*b;
 }
+
+module.exports = multiplication;
