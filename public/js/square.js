@@ -8,7 +8,7 @@ function squareNumber(value) {
         }
     }
 
-    return value^2;
+    return value * value;
 }
 
 module.exports = squareNumber
