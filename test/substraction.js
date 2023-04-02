@@ -34,7 +34,7 @@ describe('substraction.js', () => {
     })
     it('Substract with a negative string works', () => {
         const result = substraction.substractNumbers('-12', 5)
-        assert.equal(result, 17)
+        assert.equal(result, -17)
     })
     it('Substract 2 great numbers works', () => {
         const result = substraction.substractNumbers(150954, 14768)

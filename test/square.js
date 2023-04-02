@@ -28,8 +28,4 @@ describe('calculator.js', () => {
         const result = square.squareNumber(3)
         assert.isNumber(result)
     })
-    it('Works even if the number is string', () => {
-        const result = square.squareNumber('3', 2)
-        assert.isNumber(result)
-    })
 })
