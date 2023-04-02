@@ -37,7 +37,7 @@ function input(userInput) {
         if(firstNumber === "") firstNumber = "0"
         // Result asked
         if(userInput == "=") {
-            if(secondNumber === "") secondNumber = "0"
+            if(secondNumber === "" || secondNumber === "-") secondNumber = "0"
             // If enter is pressed without any operation
             if(operator === "") operator = "+"
             result = calculHandler(parseInt(firstNumber), parseInt(secondNumber), operator)
