@@ -1,5 +1,4 @@
-const addition = require('./addition')
 
-class calculHandler {
-
+function errorHandler(error) {
+    console.log(error)
 }

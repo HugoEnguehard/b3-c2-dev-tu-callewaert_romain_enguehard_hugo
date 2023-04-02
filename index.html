@@ -3,8 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculatrice</title>
+    <script src="./public/js/errorHandler.js"></script>
+    <script src="./public/js/calculHandler.js"></script>
+    <script src="./public/js/inputHandler.js"></script>
 </head>
 <body>
-    
+    <main>
+        <div id="calculatrice">
+            <span id="firstNumber">0</span> <span id="operator"></span> 
+            <br>
+            <span id="secondNumber">0</span>
+            <br>
+            <span id="result"></span>
+            <br>
+            <div id="clavier">
+                <button onclick="input(0)">0</button>
+                <button onclick="input(1)">1</button>
+                <button onclick="input(2)">2</button>
+                <button onclick="input(3)">3</button>
+                <button onclick="input(4)">4</button>
+                <button onclick="input(5)">5</button>
+                <button onclick="input(6)">6</button>
+                <button onclick="input(7)">7</button>
+                <button onclick="input(8)">8</button>
+                <button onclick="input(9)">9</button>
+                <br>
+                <button onclick="input('+')">+</button>
+                <button onclick="input('-')">-</button>
+                <button onclick="input('x')">x</button>
+                <button onclick="input('/')">/</button>
+                <button onclick="input('%')">%</button>
+                <button onclick="input('²')">²</button>
+                <button onclick="input('√')">√</button>
+                <br>
+                <button onclick="input('=')">=</button>
+                <br>
+                <button onclick="input('←')">←</button>
+                <button onclick="input('CE')">CE</button>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
