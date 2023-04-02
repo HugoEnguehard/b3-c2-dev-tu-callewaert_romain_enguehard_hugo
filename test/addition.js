@@ -3,31 +3,54 @@ const { expect } = require('chai');
 const addition = require('../public/js/addition')
 
 // Additions tests
-describe('addition.js', () => {
-    it('Result is a number', ()=>{
-        const result = addition.addNumbers(1, 3)
-        assert.equal(typeof(result), 'number')
+describe('Addition', () => {
+    // Addition of 2 positive numbers
+    it('Adding 2 positive numbers work', ()=>{
+        expect(addition(1, 3)).to.equal(4)
+        expect(addition(2, 6)).to.not.equal(18)
     })
-    it('Adding 2 numbers works', () => {
-        const result = addition.addNumbers(2, 3, 'These numbers are equal')
-        assert.equal(result, 5)
+
+    // Addition with one or both parametres NaN return NaN
+    it('Adding one number with NaN returns NaN', ()=>{
+        expect(addition("-2", 2)).to.be.NaN
+        expect(addition("2", 2)).to.be.NaN
+        expect(addition("0", 2)).to.be.NaN
+
+        expect(addition(3, "-5")).to.be.NaN
+        expect(addition(4, "3")).to.be.NaN
+        expect(addition(5, "0")).to.be.NaN
     })
-    it('Adding 5 and 7 don\'t give 3', () => {
-        const result = addition.addNumbers(5, 7)
-        assert.notEqual(result, 3, 'These numbers are not equal')
+    it('Adding two NaN returns NaN', ()=>{
+        expect(addition("-2", "2")).to.be.NaN
+        expect(addition("2", "2")).to.be.NaN
+        expect(addition("0", "2")).to.be.NaN
     })
-    it('Adding numbers in string type works', ()=>{
-        const result = addition.addNumbers("5", "9")
-        assert.equal(result, 14)
+
+    // Addition of one positive and one negative number
+    it('Adding one positive and one negative number works', () => {
+        expect(addition(-5, 7)).to.equal(2)
+        expect(addition(3, -7)).to.equal(-4)
     })
-    it('Adding a number to a string works', ()=>{
-        const result = addition.addNumbers(1, "9")
-        assert.equal(result, 10)
+
+    // Addition with a zero
+    it('Adding one number to zero works', ()=>{
+        expect(addition(3, 0)).to.equal(3)
+        expect(addition(0, 5)).to.equal(5)
+        expect(addition(0, -4)).to.equal(-4)
+        expect(addition(-2, 0)).to.equal(-2)
     })
-    it('Adding a string to a number works', ()=>{
-        const result = addition.addNumbers("12", 8)
-        assert.equal(result, 20)
+
+    // Addition with 2 zero
+    it('Adding two zero works', ()=>{
+        expect(addition(0, 0)).to.equal(0)
     })
+
+    // Addition of opposite number gives 0
+    it('Adding two opposite numbers gives zero', ()=>{
+        expect(addition(-2, 2)).to.equal(0)
+    })
+
+
     
     // it('', () => {
     //     const result = addition

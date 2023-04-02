@@ -3,8 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculatrice</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <!-- <script src="./public/js/addition.js"></script>
+    <script src="./public/js/multiplication.js"></script>
+    <script src="./public/js/percentage.js"></script>
+    <script src="./public/js/squareroot.js"></script> -->
+
+    <script src="./public/js/errorHandler.js"></script>
+    <script src="./public/js/calculHandler.js"></script>
+    <script src="./public/js/inputHandler.js"></script>
 </head>
 <body>
-    
+    <main>
+        <div id="calculatrice">
+            <div id="display">
+                <span id="firstNumber">0</span> <span id="operator"></span>  <span id="secondNumber">0</span>
+                <br>
+                Result : <span id="result"></span>
+                <br>
+            </div>
+            
+            <div id="clavier">
+                <div class="row">   
+                    <button onclick="input('²')">²</button>
+                    <button onclick="input('√')">√</button>
+                    <button onclick="input('←')">←</button>
+                    <button onclick="input('CE')">CE</button>
+                </div>
+                <div class="row">
+                    <button onclick="input(7)">7</button>
+                    <button onclick="input(8)">8</button>
+                    <button onclick="input(9)">9</button>
+                    <button onclick="input('x')">x</button>
+                </div>
+                <div class="row">
+                    <button onclick="input(4)">4</button>
+                    <button onclick="input(5)">5</button>
+                    <button onclick="input(6)">6</button>
+                    <button onclick="input('/')">/</button>
+                </div>
+                <div class="row">
+
+                    <button onclick="input(1)">1</button>
+                    <button onclick="input(2)">2</button>
+                    <button onclick="input(3)">3</button>
+                    <button onclick="input('+')">+</button>
+                </div>
+                <div class="row">
+                    <button onclick="input(0)">0</button>
+                    <button onclick="input('-')">-</button>
+                    <button onclick="input('%')">%</button>
+                    <button onclick="input('=')">=</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
